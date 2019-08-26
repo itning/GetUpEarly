@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">早起打卡</string>
+    <string name="qq_check_in_str">QQ打卡</string>
+    <string name="qq_get_up_early_str">QQ早起打卡奖金赛</string>
+    <string name="weibo_get_up_early_str">微博早起打卡赢现金</string>
+    <string name="ali_tree_str">蚂蚁森林</string>
+    <string name="ali_sport_str">支付宝运动</string>
+    <string name="ali_manor_str">蚂蚁庄园</string>
+</resources>
