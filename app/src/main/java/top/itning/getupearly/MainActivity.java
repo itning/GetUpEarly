@@ -15,6 +15,9 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.content.ContextCompat;
 
 
+/**
+ * @author itning
+ */
 public class MainActivity extends AppCompatActivity {
     private static final String TAG = "MainActivity";
     /**
@@ -61,11 +64,11 @@ public class MainActivity extends AppCompatActivity {
         try {
             switch (view.getId()) {
                 case R.id.qq_check_in: {
-                    startQQLink(QQ_CHECK_IN_URL_PREFIX);
+                    startQqLink(QQ_CHECK_IN_URL_PREFIX);
                     break;
                 }
                 case R.id.qq_get_up_early: {
-                    startQQLink(QQ_GET_UP_EARLY_URL_PREFIX);
+                    startQqLink(QQ_GET_UP_EARLY_URL_PREFIX);
                     break;
                 }
                 case R.id.weibo_get_up_early: {
@@ -84,15 +87,18 @@ public class MainActivity extends AppCompatActivity {
                     startUrlScheme(ALI_SPORT_URL_SCHEME);
                     break;
                 }
+                default:
+                    Toast.makeText(this, "未知选项", Toast.LENGTH_LONG).show();
             }
         } catch (ActivityNotFoundException e) {
             Log.d(TAG, "app not found");
             Toast.makeText(this, "APP没有找到", Toast.LENGTH_LONG).show();
         } catch (Exception e) {
-            Log.e(TAG, e.getMessage());
+            String msg = "error detail: " + e.getMessage();
+            Log.e(TAG, msg);
             new AlertDialog.Builder(this)
                     .setTitle("错误")
-                    .setMessage(e.getMessage())
+                    .setMessage(msg)
                     .show();
         }
     }
@@ -111,10 +117,9 @@ public class MainActivity extends AppCompatActivity {
      *
      * @param urlPrefix 网址（必须使用base64进行编码）
      */
-    private void startQQLink(@NonNull String urlPrefix) {
+    private void startQqLink(@NonNull String urlPrefix) {
         String uri = String.format(QQ_BROWSER_URL_TEMPLATE, urlPrefix);
         Intent intent = new Intent(android.content.Intent.ACTION_VIEW, Uri.parse(uri));
-        //intent.setFlags(android.content.Intent.FLAG_ACTIVITY_NEW_TASK);
         startActivity(intent);
     }
 
