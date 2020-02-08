@@ -108,7 +108,7 @@ public class MainActivity extends AppCompatActivity {
      *
      * @param urlScheme urlScheme
      */
-    private void startUrlScheme(String urlScheme) {
+    private void startUrlScheme(@NonNull String urlScheme) {
         startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse(urlScheme)));
     }
 
