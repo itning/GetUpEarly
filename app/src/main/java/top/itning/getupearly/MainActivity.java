@@ -48,6 +48,10 @@ public class MainActivity extends AppCompatActivity {
      * 微博早起奖金
      */
     private static final String WEIBO_GET_UP_EARLY_URL = "https://getup.sc.weibo.com/home";
+    /**
+     * 支付宝早起打卡挑战赛
+     */
+    private static final String ALI_SPORTS_SERVER_URL_SCHEME = "alipays://platformapi/startapp?appId=20000067&url=https%3a%2f%2factivity-alisports.taobao.com%2fgetup";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -85,6 +89,10 @@ public class MainActivity extends AppCompatActivity {
                 }
                 case R.id.ali_sport: {
                     startUrlScheme(ALI_SPORT_URL_SCHEME);
+                    break;
+                }
+                case R.id.ali_sport_server: {
+                    startUrlScheme(ALI_SPORTS_SERVER_URL_SCHEME);
                     break;
                 }
                 default:
