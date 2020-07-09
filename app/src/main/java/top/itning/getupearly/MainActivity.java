@@ -5,6 +5,8 @@ import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Toast;
 
@@ -56,6 +58,10 @@ public class MainActivity extends AppCompatActivity {
      * 支付宝天天红包赛
      */
     private static final String ALI_DD_SPORTS_SERVER_URL_SCHEME = "alipays://platformapi/startapp?appId=20000067&url=https%3a%2f%2fhuodong.taobao.com%2fwow%2ftyact%2fact%2fddsports-home-alipay%3fgame_type%3d1";
+    /**
+     * Project GitHub Url
+     */
+    private static final String GITHUB_FOR_STAR = "https://github.com/itning/GetUpEarly";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -66,6 +72,22 @@ public class MainActivity extends AppCompatActivity {
             supportActionBar.setElevation(0);
         }
         getWindow().setNavigationBarColor(ContextCompat.getColor(this, R.color.colorPrimary));
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        menu.add(Menu.NONE, Menu.NONE, Menu.NONE, getString(R.string.app_version_str, BuildConfig.VERSION_NAME));
+        getMenuInflater().inflate(R.menu.main_menu, menu);
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        if (item.getItemId() == R.id.github_for_star) {
+            startUrlScheme(GITHUB_FOR_STAR);
+            return true;
+        }
+        return super.onOptionsItemSelected(item);
     }
 
     public void onBtnClick(View view) {
