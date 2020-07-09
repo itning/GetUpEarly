@@ -14,4 +14,4 @@ Android APP
 [![HitCount](http://hits.dwyl.io/itning/GetUpEarly.svg)](http://hits.dwyl.io/itning/GetUpEarly)
 [![language](https://img.shields.io/badge/language-JAVA-green.svg)](https://github.com/itning/GetUpEarly)
 
-![index](https://raw.githubusercontent.com/itning/GetUpEarly/master/pic/index.png)
+![index](https://raw.githubusercontent.com/itning/GetUpEarly/master/pic/index.jpg)
