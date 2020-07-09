@@ -8,85 +8,49 @@
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/qq_check_in"
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="1"
-        android:background="#fff"
-        android:backgroundTint="@color/colorPrimary"
-        android:foreground="?attr/selectableItemBackground"
+        style="@style/ItemCommonStyle"
         android:onClick="onBtnClick"
-        android:text="@string/qq_check_in_str"
-        android:textColor="#fff" />
+        android:text="@string/qq_check_in_str" />
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/qq_get_up_early"
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="1"
-        android:background="#fff"
-        android:backgroundTint="@color/colorPrimary"
-        android:foreground="?attr/selectableItemBackground"
+        style="@style/ItemCommonStyle"
         android:onClick="onBtnClick"
-        android:text="@string/qq_get_up_early_str"
-        android:textColor="#fff" />
+        android:text="@string/qq_get_up_early_str" />
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/weibo_get_up_early"
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="1"
-        android:background="#fff"
-        android:backgroundTint="@color/colorPrimary"
-        android:foreground="?attr/selectableItemBackground"
+        style="@style/ItemCommonStyle"
         android:onClick="onBtnClick"
-        android:text="@string/weibo_get_up_early_str"
-        android:textColor="#fff" />
+        android:text="@string/weibo_get_up_early_str" />
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/ali_sport_server"
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="1"
-        android:background="#fff"
-        android:backgroundTint="@color/colorPrimary"
-        android:foreground="?attr/selectableItemBackground"
+        style="@style/ItemCommonStyle"
         android:onClick="onBtnClick"
-        android:text="@string/ali_sport_server_str"
-        android:textColor="#fff" />
+        android:text="@string/ali_sport_server_str" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/ali_dd_server"
+        style="@style/ItemCommonStyle"
+        android:onClick="onBtnClick"
+        android:text="@string/ali_dd_server_str" />
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/ali_tree"
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="1"
-        android:background="#fff"
-        android:backgroundTint="@color/colorPrimary"
-        android:foreground="?attr/selectableItemBackground"
+        style="@style/ItemCommonStyle"
         android:onClick="onBtnClick"
-        android:text="@string/ali_tree_str"
-        android:textColor="#fff" />
+        android:text="@string/ali_tree_str" />
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/ali_manor"
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="1"
-        android:background="#fff"
-        android:backgroundTint="@color/colorPrimary"
-        android:foreground="?attr/selectableItemBackground"
+        style="@style/ItemCommonStyle"
         android:onClick="onBtnClick"
-        android:text="@string/ali_manor_str"
-        android:textColor="#fff" />
+        android:text="@string/ali_manor_str" />
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/ali_sport"
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="1"
-        android:background="#fff"
-        android:backgroundTint="@color/colorPrimary"
-        android:foreground="?attr/selectableItemBackground"
+        style="@style/ItemCommonStyle"
         android:onClick="onBtnClick"
-        android:text="@string/ali_sport_str"
-        android:textColor="#fff" />
+        android:text="@string/ali_sport_str" />
 </LinearLayout>

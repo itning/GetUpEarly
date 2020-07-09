@@ -51,7 +51,11 @@ public class MainActivity extends AppCompatActivity {
     /**
      * 支付宝早起打卡挑战赛
      */
-    private static final String ALI_SPORTS_SERVER_URL_SCHEME = "alipays://platformapi/startapp?appId=20000067&url=https%3a%2f%2factivity-alisports.taobao.com%2fgetup";
+    private static final String ALI_SPORTS_GETUP_SERVER_URL_SCHEME = "alipays://platformapi/startapp?appId=20000067&url=https%3a%2f%2factivity-alisports.taobao.com%2fgetup";
+    /**
+     * 支付宝天天红包赛
+     */
+    private static final String ALI_DD_SPORTS_SERVER_URL_SCHEME = "alipays://platformapi/startapp?appId=20000067&url=https%3a%2f%2fhuodong.taobao.com%2fwow%2ftyact%2fact%2fddsports-home-alipay%3fgame_type%3d1";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -92,7 +96,11 @@ public class MainActivity extends AppCompatActivity {
                     break;
                 }
                 case R.id.ali_sport_server: {
-                    startUrlScheme(ALI_SPORTS_SERVER_URL_SCHEME);
+                    startUrlScheme(ALI_SPORTS_GETUP_SERVER_URL_SCHEME);
+                    break;
+                }
+                case R.id.ali_dd_server: {
+                    startUrlScheme(ALI_DD_SPORTS_SERVER_URL_SCHEME);
                     break;
                 }
                 default:
