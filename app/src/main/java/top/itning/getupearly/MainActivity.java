@@ -1,5 +1,6 @@
 package top.itning.getupearly;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -13,6 +14,7 @@ import top.itning.getupearly.config.SharedPreferencesConfig;
 import top.itning.getupearly.factory.ViewFactory;
 import top.itning.getupearly.strategy.StrategyContext;
 import top.itning.getupearly.strategy.impl.UrlSchemeStrategy;
+import top.itning.getupearly.ui.ViewSettingActivity;
 
 
 /**
@@ -52,7 +54,11 @@ public class MainActivity extends AppCompatActivity {
         if (item.getItemId() == R.id.github_for_star) {
             new StrategyContext(this, UrlSchemeStrategy.getInstance()).open(GITHUB_FOR_STAR);
             return true;
+        } else if (item.getItemId() == R.id.view_setting) {
+            startActivity(new Intent(this, ViewSettingActivity.class));
+            return true;
+        } else {
+            return super.onOptionsItemSelected(item);
         }
-        return super.onOptionsItemSelected(item);
     }
 }

@@ -10,4 +10,6 @@
     <string name="ali_dd_server_str">支付宝天天红包赛</string>
     <string name="github_for_star_str">在GitHub上点个Star</string>
     <string name="app_version_str">版本：%1$s</string>
+    <string name="view_setting_str">个性化设置</string>
+    <string name="save_success_str">保存成功，重新打开APP生效</string>
 </resources>

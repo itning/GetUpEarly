@@ -3,4 +3,8 @@
     <item
         android:id="@+id/github_for_star"
         android:title="@string/github_for_star_str" />
+
+    <item
+        android:id="@+id/view_setting"
+        android:title="@string/view_setting_str" />
 </menu>

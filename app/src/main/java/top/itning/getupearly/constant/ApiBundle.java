@@ -41,8 +41,18 @@ public class ApiBundle implements ViewItem<Api> {
     @Override
     public boolean equals(@Nullable Object obj) {
         if (obj instanceof ApiBundle) {
-            return api.equals(obj);
+            ApiBundle apiBundle = (ApiBundle) obj;
+            return api.equals(apiBundle.api);
         }
         return super.equals(obj);
+    }
+
+    @NonNull
+    @Override
+    public String toString() {
+        return "ApiBundle{" +
+                "api=" + api +
+                ", order=" + order +
+                '}';
     }
 }

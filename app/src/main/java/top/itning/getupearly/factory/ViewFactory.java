@@ -17,7 +17,7 @@ import androidx.appcompat.widget.AppCompatButton;
 import androidx.core.content.res.ResourcesCompat;
 
 import java.util.ArrayList;
-import java.util.Arrays;
+import java.util.Collections;
 import java.util.List;
 import java.util.Map;
 
@@ -57,13 +57,8 @@ public class ViewFactory extends AbstractViewFactory<Api> {
     }
 
     @Override
-    @SuppressWarnings("unchecked")
     public void sort(@NonNull List<ViewItem<Api>> list) {
-        Arrays.sort(list.toArray(), (o1, o2) -> {
-            ViewItem<Api> a = (ViewItem<Api>) o1;
-            ViewItem<Api> b = (ViewItem<Api>) o2;
-            return Integer.compare(a.getOrder(), b.getOrder());
-        });
+        Collections.sort(list, (a, b) -> Integer.compare(a.getOrder(), b.getOrder()));
     }
 
     @NonNull
