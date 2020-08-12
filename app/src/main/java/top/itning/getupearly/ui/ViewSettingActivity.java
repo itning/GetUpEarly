@@ -68,6 +68,8 @@ public class ViewSettingActivity extends AppCompatActivity {
         callBack = new ViewItemTouchHelperCallBack(itemDataList, adapter);
         ItemTouchHelper itemTouchHelper = new ItemTouchHelper(callBack);
         itemTouchHelper.attachToRecyclerView(view);
+
+        Toast.makeText(this, R.string.sort_tip_toast_str, Toast.LENGTH_SHORT).show();
     }
 
     @Override

@@ -14,4 +14,5 @@
     <string name="save_success_str">保存成功，重新打开APP生效</string>
     <string name="taobao_get_up_early_str">淘宝早起打卡挑战赛</string>
     <string name="jd_get_up_early_str">京东早起打卡</string>
+    <string name="sort_tip_toast_str">长按某一项可以拖动排序哦</string>
 </resources>
