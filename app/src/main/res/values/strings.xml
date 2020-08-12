@@ -12,4 +12,6 @@
     <string name="app_version_str">版本：%1$s</string>
     <string name="view_setting_str">个性化设置</string>
     <string name="save_success_str">保存成功，重新打开APP生效</string>
+    <string name="taobao_get_up_early_str">淘宝早起打卡挑战赛</string>
+    <string name="jd_get_up_early_str">京东早起打卡</string>
 </resources>

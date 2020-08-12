@@ -89,7 +89,7 @@ public class ViewFactory extends AbstractViewFactory<Api> {
         try {
             strategyContext.open(api.getUrl());
         } catch (ActivityNotFoundException e) {
-            Log.d(TAG, "app not found");
+            Log.w(TAG, "app not found " + e.getMessage());
             Toast.makeText(context, "APP没有找到", Toast.LENGTH_LONG).show();
         }
     }
