@@ -1,56 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/ll_root"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
     tools:context=".MainActivity">
 
-    <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/qq_check_in"
-        style="@style/ItemCommonStyle"
-        android:onClick="onBtnClick"
-        android:text="@string/qq_check_in_str" />
-
-    <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/qq_get_up_early"
-        style="@style/ItemCommonStyle"
-        android:onClick="onBtnClick"
-        android:text="@string/qq_get_up_early_str" />
-
-    <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/weibo_get_up_early"
-        style="@style/ItemCommonStyle"
-        android:onClick="onBtnClick"
-        android:text="@string/weibo_get_up_early_str" />
-
-    <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/ali_sport_server"
-        style="@style/ItemCommonStyle"
-        android:onClick="onBtnClick"
-        android:text="@string/ali_sport_server_str" />
-
-    <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/ali_dd_server"
-        style="@style/ItemCommonStyle"
-        android:onClick="onBtnClick"
-        android:text="@string/ali_dd_server_str" />
-
-    <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/ali_tree"
-        style="@style/ItemCommonStyle"
-        android:onClick="onBtnClick"
-        android:text="@string/ali_tree_str" />
-
-    <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/ali_manor"
-        style="@style/ItemCommonStyle"
-        android:onClick="onBtnClick"
-        android:text="@string/ali_manor_str" />
-
-    <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/ali_sport"
-        style="@style/ItemCommonStyle"
-        android:onClick="onBtnClick"
-        android:text="@string/ali_sport_str" />
 </LinearLayout>
