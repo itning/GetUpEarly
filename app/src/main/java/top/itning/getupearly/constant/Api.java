@@ -50,9 +50,9 @@ public enum Api {
      */
     TAOBAO_GETUP_SERVER_URL_SCHEME(R.string.taobao_get_up_early_str, Strategy.URL_SCHEME, "taobao://activity-alisports.taobao.com/p/taobao/activity/getup_early/m_home.html?game_type=9"),
     /**
-     * 京东早起打卡
+     * 京东金融早起打卡
      */
-    JD_GET_UP_EARLY_URL_SCHEME(R.string.jd_get_up_early_str, Strategy.URL_SCHEME, "https://m.jr.jd.com/integrate/getUp/html/index.html"),
+    JD_GET_UP_EARLY_URL_SCHEME(R.string.jd_get_up_early_str, Strategy.URL_SCHEME, "jdmobile://share?jumpType=7&jumpUrl=215"),
     ;
     /**
      * 打开策略
