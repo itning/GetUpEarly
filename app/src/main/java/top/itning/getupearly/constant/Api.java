@@ -53,6 +53,14 @@ public enum Api {
      * 京东金融早起打卡
      */
     JD_GET_UP_EARLY_URL_SCHEME(R.string.jd_get_up_early_str, Strategy.URL_SCHEME, "jdmobile://share?jumpType=7&jumpUrl=215"),
+    /**
+     * 支付宝健康早起打卡
+     */
+    ALI_HEALTH_GET_UP_EARLY_URL_SCHEME(R.string.ali_health_get_up_early_str, Strategy.URL_SCHEME, "alipays://platformapi/startapp?appId=2018091361395351&page=pages/signin/index"),
+    /**
+     * 支付宝运动打卡领健康金
+     */
+    ALI_HEALTH_SPORTS_URL_SCHEME(R.string.ali_health_sports_early_str, Strategy.URL_SCHEME, "alipays://platformapi/startapp?appId=2018091361395351&page=pages/sport/index"),
     ;
     /**
      * 打开策略
