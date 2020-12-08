@@ -45,6 +45,8 @@
 -dontwarn javax.annotation.**
 -dontwarn javax.inject.**
 
+-keep class top.itning.getupearly.entity.** { *; }
+
 #Bugly
 -dontwarn com.tencent.bugly.**
 -keep public class com.tencent.bugly.**{*;}
@@ -60,3 +62,6 @@
 
 # Ignore JSR 305 annotations for embedding nullability information.
 -dontwarn javax.annotation.**
+
+# Guarded by a NoClassDefFoundError try/catch and only used when on the classpath.
+-dontwarn kotlin.Unit

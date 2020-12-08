@@ -17,4 +17,7 @@
     <string name="sort_tip_toast_str">长按某一项可以拖动排序哦</string>
     <string name="ali_health_get_up_early_str">支付宝健康早起打卡</string>
     <string name="ali_health_sports_early_str">支付宝运动打卡领健康金</string>
+    <string name="check_update_failed_str">检查更新失败</string>
+    <string name="check_update_negative_button_str">取消</string>
+    <string name="check_update_positive_button_str">确定</string>
 </resources>

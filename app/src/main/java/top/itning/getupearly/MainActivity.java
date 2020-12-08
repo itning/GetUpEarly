@@ -2,16 +2,25 @@ package top.itning.getupearly;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.LinearLayout;
+import android.widget.Toast;
 
 import androidx.appcompat.app.ActionBar;
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.content.ContextCompat;
 
+import io.reactivex.android.schedulers.AndroidSchedulers;
+import io.reactivex.disposables.Disposable;
+import io.reactivex.schedulers.Schedulers;
 import top.itning.getupearly.config.SharedPreferencesConfig;
 import top.itning.getupearly.factory.ViewFactory;
+import top.itning.getupearly.net.HttpHelper;
+import top.itning.getupearly.net.NetInfo;
+import top.itning.getupearly.strategy.Strategy;
 import top.itning.getupearly.strategy.StrategyContext;
 import top.itning.getupearly.strategy.impl.UrlSchemeStrategy;
 import top.itning.getupearly.ui.ViewSettingActivity;
@@ -21,10 +30,14 @@ import top.itning.getupearly.ui.ViewSettingActivity;
  * @author itning
  */
 public class MainActivity extends AppCompatActivity {
+
+    private static final String TAG = "MainActivity";
     /**
      * Project GitHub Url
      */
     private static final String GITHUB_FOR_STAR = "https://github.com/itning/GetUpEarly";
+
+    private Disposable disposable;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -40,6 +53,34 @@ public class MainActivity extends AppCompatActivity {
         SharedPreferencesConfig config = new SharedPreferencesConfig(getSharedPreferences("app_config", MODE_PRIVATE));
         ViewFactory viewFactory = new ViewFactory(config, this);
         viewFactory.start(linearLayout);
+        getInfoFromNet();
+    }
+
+    private void getInfoFromNet() {
+        disposable = HttpHelper.get(NetInfo.class)
+                .get()
+                .subscribeOn(Schedulers.io())
+                .observeOn(AndroidSchedulers.mainThread())
+                .subscribe(info -> {
+                    Log.i(TAG, "Get Net Info：" + info.toString());
+                    if (info.isNeedCheckVersionCode() && info.getVersionCode() <= BuildConfig.VERSION_CODE) {
+                        return;
+                    }
+                    new AlertDialog.Builder(this)
+                            .setTitle(info.getTitle())
+                            .setMessage(info.getDesc())
+                            .setNegativeButton(null == info.getNegativeButtonText() ? getResources().getString(R.string.check_update_negative_button_str) : info.getNegativeButtonText(), null)
+                            .setPositiveButton(null == info.getPositiveButtonText() ? getResources().getString(R.string.check_update_positive_button_str) : info.getPositiveButtonText(), (dialog, which) -> {
+                                if (null != info.getLink()) {
+                                    new StrategyContext(this, Strategy.URL_SCHEME).open(info.getLink());
+                                }
+                            })
+                            .show();
+
+                }, e -> {
+                    Log.e(TAG, "Get Net Info Exception", e);
+                    Toast.makeText(this, R.string.check_update_failed_str, Toast.LENGTH_SHORT).show();
+                });
     }
 
     @Override
@@ -60,5 +101,13 @@ public class MainActivity extends AppCompatActivity {
         } else {
             return super.onOptionsItemSelected(item);
         }
+    }
+
+    @Override
+    protected void onDestroy() {
+        if (disposable != null && !disposable.isDisposed()) {
+            disposable.dispose();
+        }
+        super.onDestroy();
     }
 }
