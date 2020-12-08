@@ -7,7 +7,7 @@ import androidx.annotation.Nullable;
  * API包裹
  *
  * @author itning
- * @date 2020/8/11 9:01
+ * @since 2020/8/11 9:01
  */
 public class ApiBundle implements ViewItem<Api> {
     private final Api api;

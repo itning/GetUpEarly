@@ -31,7 +31,7 @@ import top.itning.getupearly.strategy.StrategyContext;
  * 视图工厂
  *
  * @author itning
- * @date 2020/8/11 8:17
+ * @since 2020/8/11 8:17
  */
 public class ViewFactory extends AbstractViewFactory<Api> {
     private static final String TAG = "ViewFactory";

@@ -10,7 +10,7 @@ import top.itning.getupearly.strategy.Strategy;
  * API枚举
  *
  * @author itning
- * @date 2020/8/10 19:33
+ * @since 2020/8/10 19:33
  */
 public enum Api {
     /**

@@ -4,7 +4,7 @@ import top.itning.getupearly.constant.Api;
 
 /**
  * @author itning
- * @date 2020/8/11 15:33
+ * @since 2020/8/11 15:33
  */
 public class ItemData {
     private Api api;

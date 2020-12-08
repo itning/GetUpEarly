@@ -15,7 +15,7 @@ import top.itning.getupearly.ui.entity.ItemData;
 
 /**
  * @author itning
- * @date 2020/8/11 15:56
+ * @since 2020/8/11 15:56
  */
 public class ViewItemTouchHelperCallBack extends ItemTouchHelper.Callback {
     private final List<ItemData> list;

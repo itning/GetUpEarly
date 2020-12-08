@@ -17,7 +17,7 @@ import top.itning.getupearly.ui.entity.ItemData;
 
 /**
  * @author itning
- * @date 2020/8/11 15:04
+ * @since 2020/8/11 15:04
  */
 public class ViewSettingAdapter extends RecyclerView.Adapter<ViewSettingAdapter.SettingViewHolder> {
     private final AppCompatActivity activity;

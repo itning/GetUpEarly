@@ -11,7 +11,7 @@ import top.itning.getupearly.strategy.Strategy;
 
 /**
  * @author itning
- * @date 2020/8/11 13:17
+ * @since 2020/8/11 13:17
  */
 public class QqLinkStrategy implements OpenStrategy {
     private static final OpenStrategy QQ_LINK_STRATEGY = new QqLinkStrategy();

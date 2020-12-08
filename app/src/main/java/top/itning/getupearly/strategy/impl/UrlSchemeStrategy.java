@@ -11,7 +11,7 @@ import top.itning.getupearly.strategy.Strategy;
 
 /**
  * @author itning
- * @date 2020/8/11 13:13
+ * @since 2020/8/11 13:13
  */
 public class UrlSchemeStrategy implements OpenStrategy {
     private UrlSchemeStrategy() {

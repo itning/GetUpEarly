@@ -15,7 +15,7 @@ import top.itning.getupearly.constant.ViewItem;
  * 抽象视图工厂
  *
  * @author itning
- * @date 2020/8/10 19:54
+ * @since 2020/8/10 19:54
  */
 public abstract class AbstractViewFactory<T> implements View.OnClickListener {
 

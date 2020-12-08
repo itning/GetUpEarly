@@ -12,7 +12,7 @@ import top.itning.getupearly.constant.ViewItem;
  * 用户配置
  *
  * @author itning
- * @date 2020/8/10 20:04
+ * @since 2020/8/10 20:04
  */
 public interface Config<T> {
     /**

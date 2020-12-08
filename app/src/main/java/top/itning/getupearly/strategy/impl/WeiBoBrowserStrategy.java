@@ -12,7 +12,7 @@ import top.itning.getupearly.strategy.Strategy;
 
 /**
  * @author itning
- * @date 2020/8/11 12:58
+ * @since 2020/8/11 12:58
  */
 public class WeiBoBrowserStrategy implements OpenStrategy {
     private WeiBoBrowserStrategy() {

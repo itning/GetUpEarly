@@ -16,7 +16,7 @@ import top.itning.getupearly.constant.ViewItem;
  * SharedPreferences实现配置
  *
  * @author itning
- * @date 2020/8/10 20:07
+ * @since 2020/8/10 20:07
  */
 public class SharedPreferencesConfig implements Config<Api> {
 

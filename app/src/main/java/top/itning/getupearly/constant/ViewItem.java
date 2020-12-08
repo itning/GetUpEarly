@@ -6,7 +6,7 @@ import androidx.annotation.NonNull;
  * 每一项
  *
  * @author itning
- * @date 2020/8/11 8:52
+ * @since 2020/8/11 8:52
  */
 public interface ViewItem<T> {
     /**
