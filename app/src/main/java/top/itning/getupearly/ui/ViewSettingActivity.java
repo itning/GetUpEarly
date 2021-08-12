@@ -1,5 +1,8 @@
 package top.itning.getupearly.ui;
 
+import static top.itning.getupearly.config.SharedPreferencesConfig.getIsShowKey;
+import static top.itning.getupearly.config.SharedPreferencesConfig.getOrderKey;
+
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.Menu;
@@ -24,9 +27,6 @@ import top.itning.getupearly.ui.adapter.ViewSettingAdapter;
 import top.itning.getupearly.ui.callback.ViewItemTouchHelperCallBack;
 import top.itning.getupearly.ui.entity.ItemData;
 
-import static top.itning.getupearly.config.SharedPreferencesConfig.getIsShowKey;
-import static top.itning.getupearly.config.SharedPreferencesConfig.getOrderKey;
-
 /**
  * 视图设置
  *
@@ -36,7 +36,6 @@ public class ViewSettingActivity extends AppCompatActivity {
 
     private SharedPreferences sharedPreferences;
     private List<ItemData> itemDataList;
-    private ViewItemTouchHelperCallBack callBack;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -65,7 +64,7 @@ public class ViewSettingActivity extends AppCompatActivity {
 
         view.setAdapter(adapter);
 
-        callBack = new ViewItemTouchHelperCallBack(itemDataList, adapter);
+        ViewItemTouchHelperCallBack callBack = new ViewItemTouchHelperCallBack(itemDataList, adapter);
         ItemTouchHelper itemTouchHelper = new ItemTouchHelper(callBack);
         itemTouchHelper.attachToRecyclerView(view);
 
@@ -74,18 +73,14 @@ public class ViewSettingActivity extends AppCompatActivity {
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-        switch (item.getItemId()) {
-            case android.R.id.home: {
-                this.finish();
-                return true;
-            }
-            case R.id.save_config: {
-                saveConfig();
-                return true;
-            }
-            default: {
-                return super.onOptionsItemSelected(item);
-            }
+        if (item.getItemId() == android.R.id.home) {
+            this.finish();
+            return true;
+        } else if (item.getItemId() == R.id.save_config) {
+            saveConfig();
+            return true;
+        } else {
+            return super.onOptionsItemSelected(item);
         }
     }
 
