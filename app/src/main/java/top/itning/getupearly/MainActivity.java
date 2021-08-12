@@ -66,7 +66,7 @@ public class MainActivity extends AppCompatActivity {
                     if (info.isNeedCheckVersionCode() && info.getVersionCode() <= BuildConfig.VERSION_CODE) {
                         return;
                     }
-                    new AlertDialog.Builder(this)
+                    new AlertDialog.Builder(this, R.style.MyAlertDialogStyle)
                             .setTitle(info.getTitle())
                             .setMessage(info.getDesc())
                             .setNegativeButton(null == info.getNegativeButtonText() ? getResources().getString(R.string.check_update_negative_button_str) : info.getNegativeButtonText(), null)
