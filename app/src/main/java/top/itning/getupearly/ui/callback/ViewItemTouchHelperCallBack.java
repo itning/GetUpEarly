@@ -40,9 +40,9 @@ public class ViewItemTouchHelperCallBack extends ItemTouchHelper.Callback {
     @Override
     public boolean onMove(@NonNull RecyclerView recyclerView, @NonNull RecyclerView.ViewHolder viewHolder, @NonNull RecyclerView.ViewHolder target) {
         // 直接按照文档来操作啊，这文档写得太给力了,简直完美！
-        adapter.notifyItemMoved(viewHolder.getAdapterPosition(), target.getAdapterPosition());
+        adapter.notifyItemMoved(viewHolder.getBindingAdapterPosition(), target.getBindingAdapterPosition());
         // 注意这里有个坑的，itemView 都移动了，对应的数据也要移动
-        Collections.swap(list, viewHolder.getAdapterPosition(), target.getAdapterPosition());
+        Collections.swap(list, viewHolder.getBindingAdapterPosition(), target.getBindingAdapterPosition());
         return true;
     }
 
