@@ -1,5 +1,4 @@
 apply plugin: 'com.android.application'
-apply plugin: 'bugly'
 
 android {
     compileSdkVersion 31
@@ -24,10 +23,7 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
     }
-    bugly {
-        appId = 'e44358e199'
-        appKey = '10fc77a7-0f04-433d-92d6-4b3e5d852f9f'
-    }
+
     compileOptions {
         sourceCompatibility = 1.8
         targetCompatibility = 1.8
@@ -44,7 +40,6 @@ dependencies {
     implementation 'com.squareup.retrofit2:adapter-rxjava2:2.9.0'
     implementation 'io.reactivex.rxjava2:rxandroid:2.1.1'
     implementation 'io.reactivex.rxjava2:rxjava:2.2.20'
-    implementation 'com.tencent.bugly:crashreport:3.4.4'
     testImplementation 'junit:junit:4.13.2'
     androidTestImplementation 'androidx.test:runner:1.4.0'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.4.0'
