@@ -1,5 +1,7 @@
 package top.itning.getupearly.entity;
 
+import androidx.annotation.NonNull;
+
 import java.io.Serializable;
 
 /**
@@ -80,6 +82,7 @@ public class UpdateInfo implements Serializable {
         this.positiveButtonText = positiveButtonText;
     }
 
+    @NonNull
     @Override
     public String toString() {
         return "UpdateInfo{" +
