@@ -11,7 +11,7 @@ Android APP
 [![GitHub last commit](https://img.shields.io/github/last-commit/itning/GetUpEarly.svg)](https://github.com/itning/GetUpEarly/commits)
 [![GitHub release](https://img.shields.io/github/release/itning/GetUpEarly.svg)](https://github.com/itning/GetUpEarly/releases)
 [![GitHub repo size in bytes](https://img.shields.io/github/repo-size/itning/GetUpEarly.svg)](https://github.com/itning/GetUpEarly)
-[![HitCount](http://hits.dwyl.com/itning/GetUpEarly.svg)](http://hits.dwyl.com/itning/GetUpEarly)
+[![Hits](https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fgithub.com%2Fitning%2FGetUpEarly&count_bg=%2379C83D&title_bg=%23555555&icon=&icon_color=%23E7E7E7&title=hits&edge_flat=false)](https://hits.seeyoufarm.com)
 [![language](https://img.shields.io/badge/language-JAVA-green.svg)](https://github.com/itning/GetUpEarly)
 
 ![index](https://raw.githubusercontent.com/itning/GetUpEarly/master/pic/index.jpg)
