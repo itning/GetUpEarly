@@ -10,7 +10,7 @@ android {
         versionCode 10
         versionName "1.3.5"
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
-        resConfigs "zh", "en"
+        resConfigs 'zh', 'en'
     }
     buildTypes {
         release {
