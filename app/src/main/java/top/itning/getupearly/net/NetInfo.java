@@ -1,6 +1,6 @@
 package top.itning.getupearly.net;
 
-import io.reactivex.Observable;
+import io.reactivex.rxjava3.core.Observable;
 import retrofit2.http.GET;
 import top.itning.getupearly.entity.UpdateInfo;
 
