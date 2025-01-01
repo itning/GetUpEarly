@@ -53,7 +53,7 @@ public class MainActivity extends AppCompatActivity {
         SharedPreferencesConfig config = new SharedPreferencesConfig(getSharedPreferences("app_config", MODE_PRIVATE));
         ViewFactory viewFactory = new ViewFactory(config, this);
         viewFactory.start(linearLayout);
-        getInfoFromNet();
+        //getInfoFromNet();
     }
 
     private void getInfoFromNet() {
